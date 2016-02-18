@@ -14,8 +14,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.wso2.carbon.databridge.commons.utils.DataBridgeCommonsUtils;
+import org.wso2.carbon.la.log.agent.agentConf.Filter;
+import org.wso2.carbon.la.log.agent.agentConf.GroupElement;
+import org.wso2.carbon.la.log.agent.agentConf.Input;
 import org.wso2.carbon.la.log.agent.conf.LogGroup;
 import org.wso2.carbon.la.log.agent.conf.ServerConfig;
 import org.wso2.carbon.la.log.agent.data.LogEvent;
@@ -37,19 +42,23 @@ public class LogReader {
     ArrayDeque<String> lines = new ArrayDeque<String>();
     private boolean readFromTop = true;
     private LogPublisher logPublisher;
-    private LogGroup logGroup;
     private String streamId;
+    private GroupElement groupElement;
+    private String stringBuffer;
+    private boolean exFlag =false;
+    private String lastLogLine = null;
+    private LogEvent persistLog = null;
 
     /**
      * Allows output of a file that is being updated by another process.
      *
-     * @param logGroup
+     * @param groupElement
      * @param logPublisher
      */
-    public LogReader(LogPublisher logPublisher, LogGroup logGroup) throws FileNotFoundException {
-        this.file = new File(logGroup.getLogInput().getFilePath());
-        setStreamId(logGroup);
-        this.logGroup=logGroup;
+    public LogReader(LogPublisher logPublisher, GroupElement groupElement) throws FileNotFoundException {
+        this.groupElement = groupElement;
+        this.file = new File(this.groupElement.getConfig().getInput().getFile().getPath());
+        setStreamId();
         this.logPublisher=logPublisher;
     }
 
@@ -83,8 +92,8 @@ public class LogReader {
         return streamId;
     }
 
-    public void setStreamId(LogGroup logGroup) {
-        this.streamId =DataBridgeCommonsUtils.generateStreamId(logGroup.getGroupName(),logGroup.getVersion()); ;
+    public void setStreamId() {
+        this.streamId =DataBridgeCommonsUtils.generateStreamId(groupElement.getName(),groupElement.getVersion()); ;
     }
 
     private synchronized void updateOffset() {
@@ -152,7 +161,24 @@ public class LogReader {
                     try {
                         String logLine = getLine();
                         if (logLine != null && logLine != "") {
-                            logPublisher.publish(constructLogEvent(logLine), streamId);
+//                            logPublisher.publish(constructLogEvent(logLine), streamId);
+                            LogEvent logEvent = constructLogEvent(logLine);
+                            if(stringBuffer==null && !logEvent.getExtractedValues().containsValue("ERROR")){
+                                logPublisher.publish(logEvent, streamId);
+                            }
+                            if(logEvent.getExtractedValues().containsValue("ERROR")){
+                                persistLog = logEvent;
+                            }
+                            if(exFlag && stringBuffer!=null){
+                                Map<String, String> persistMap = persistLog.getExtractedValues();
+                                persistMap.put("trace",stringBuffer.toString());
+                                logEvent.setMessage(persistLog.getMessage());
+                                logEvent.setExtractedValues(persistMap);
+                                logPublisher.publish(logEvent, streamId);
+                                stringBuffer = null;
+                                exFlag =false;
+                                persistLog = null;
+                            }
                         }
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
@@ -170,7 +196,6 @@ public class LogReader {
     private class LogWatcher implements Runnable {
         private final Path path = file.toPath().getParent();
 
-        @Override
         public void run() {
             try {
                 setReadFromTop(true);
@@ -209,26 +234,35 @@ public class LogReader {
 
     private LogEvent constructLogEvent(String logLine) {
         LogEvent logEvent = new LogEvent();
-
-        try {
-            logEvent.setHost(PublisherUtil.getLocalAddress().getHostAddress());
-            logEvent.setMessage(logLine);
-            logEvent.setExtractedValues(applyFilters(logGroup.getFilters(), logLine));
-        } catch (SocketException e) {
-            e.printStackTrace();
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
+        logEvent.setMessage(logLine);
+        logEvent.setExtractedValues(applyFilters(groupElement.getConfig().getFilter(), logLine));
         return logEvent;
     }
 
-    private Map<String, String> applyFilters(List<AbstractFilter> filters,String logLine){
-        Map<String, String> values = new HashMap<String, String>();
-
-        for(AbstractFilter ab : filters){
-            ab.process(logLine, values);
+    private Map<String, String> applyFilters(Filter filter, String logLine){
+        Map<String, String> matchMap = new HashMap<String, String>();
+        for (int i=0;i<filter.getRegex().getMatch().length;i++)
+        {
+            String value = processRegEx(logLine,filter.getRegex().getMatch()[i][1]);
+            if(value!=null){
+                matchMap.put(filter.getRegex().getMatch()[i][0], value);
+                exFlag =true;
+            }else{
+                stringBuffer = stringBuffer + logLine;
+                exFlag =false;
+            }
         }
+        return matchMap;
+    }
 
-        return values;
+    private String processRegEx(String logLine, String regEx){
+        String value = null;
+        Pattern p = Pattern.compile(regEx);
+        Matcher m = p.matcher(logLine);
+        if (m.find())
+        {
+            value=m.group(0).toString();
+        }
+        return  value;
     }
 }
