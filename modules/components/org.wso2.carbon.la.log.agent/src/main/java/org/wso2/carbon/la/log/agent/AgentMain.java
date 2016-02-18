@@ -19,8 +19,8 @@ import java.io.FileReader;
 public class AgentMain {
     public static void main(String[] args) throws FileNotFoundException {
         Gson gson = new Gson();
-        LogPublisher logPublisher;
-        JsonReader jsonReader = new JsonReader(new FileReader("/home/sajithd/WSO2_LogAnalyzer/product-la/modules/components/org.wso2.carbon.la.log.agent/src/main/java/org/wso2/carbon/la/log/agent/util/sample.json"));
+        LogPublisher logPublisher =null;
+        JsonReader jsonReader = new JsonReader(new FileReader("/home/sajithd/WSO2_LogAnalyzer/product-la/modules/components/org.wso2.carbon.la.log.agent/src/main/resources/agentConfig.json"));
 
         ConfigLogAgent configLogAgent = gson.fromJson(jsonReader , ConfigLogAgent.class);
         try {
@@ -36,7 +36,12 @@ public class AgentMain {
         } catch (DataEndpointConfigurationException e) {
             e.printStackTrace();
         }
-
+        try {
+            LogReader logReader =  new LogReader(logPublisher, configLogAgent.getGroups()[0]);
+            logReader.start();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
     }
 }
