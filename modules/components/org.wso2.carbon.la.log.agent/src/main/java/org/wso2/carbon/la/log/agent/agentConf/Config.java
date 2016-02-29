@@ -4,23 +4,23 @@
 package org.wso2.carbon.la.log.agent.agentConf;
 
 public class Config {
-	private Input input;
-	private Filter filter;
+    private Input input;
+    private Filter filter;
 
- 	public void setInput(Input input) {
-		this.input = input;
-	}
+    public void setInput(Input input) {
+        this.input = input;
+    }
 
-	public Input getInput() {
-		return input;
-	}
+    public Input getInput() {
+        return input;
+    }
 
- 	public void setFilter(Filter filter) {
-		this.filter = filter;
-	}
+    public void setFilter(Filter filter) {
+        this.filter = filter;
+    }
 
-	public Filter getFilter() {
-		return filter;
-	}
+    public Filter getFilter() {
+        return filter;
+    }
 
 }
