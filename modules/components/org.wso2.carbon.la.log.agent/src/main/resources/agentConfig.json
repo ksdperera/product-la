@@ -1,10 +1,10 @@
 {
-  "agentid": "awsinstance-23",
+  "agentid": "CEP 3",
   "authid": "sDe334#q2",
   "authsecret": "defr34w3qq#@Qd",
   "output": {
     "loganalyzer": {
-      "host": "10.100.0.88",
+      "host": "localhost",
       "port": 7611,
       "user_name" : "admin",
       "password" : "admin"
@@ -12,20 +12,21 @@
   },
   "groups": [
     {
-      "name": "org.wso2.sample.logs.group.1",
+      "name": "loganalyzer",
       "version": "1.0.0",
       "config": {
         "input": {
           "file": {
-            "path": "/tmp/access_log",
+            "path": "/home/sajithd/Downloads/wso2carbon-benchmark1.log",
             "start_position": "beginning"
           }
         },
         "filter": {
           "regex": {
             "match": [
-              "level",
-              "(INFO|DEBUG|ERROR|WARN|ALL|TRACE|OFF|FATAL)"
+              ["level", "(INFO|DEBUG|ERROR|WARN|ALL|TRACE|OFF|FATAL)"],
+              ["eventTimeStamp","\\d{4}-\\d{2}-\\d{2}\\s\\d{2}:\\d{2}:\\d{2}"],
+              ["class","\\{([a-z]{2,3}(\\.[a-zA-Z][a-zA-Z_$0-9]*)*)\\.([A-Z][a-zA-Z_$0-9]*)\\}"]
             ]
           }
         }
