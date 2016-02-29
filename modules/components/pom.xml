@@ -33,5 +33,6 @@
         <module>org.wso2.carbon.la.core</module>
         <module>org.wso2.carbon.la.database</module>
         <module>org.wso2.carbon.la.restapi</module>
+        <module>org.wso2.carbon.la.log.agent</module>
     </modules>
 </project>
