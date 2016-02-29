@@ -1,16 +1,34 @@
-package org.wso2.carbon.la.log.agent;
+/*
+ *
+ *  Copyright (c) 2016, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ * /
+ */
+
+package org.wso2.carbon.la.log.agent.data;
 
 import java.io.*;
-import java.net.SocketException;
-import java.net.UnknownHostException;
 import java.nio.file.ClosedWatchServiceException;
 import java.nio.file.Path;
 import java.nio.file.StandardWatchEventKinds;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayDeque;
+import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,13 +38,6 @@ import java.util.regex.Pattern;
 import org.wso2.carbon.databridge.commons.utils.DataBridgeCommonsUtils;
 import org.wso2.carbon.la.log.agent.agentConf.Filter;
 import org.wso2.carbon.la.log.agent.agentConf.GroupElement;
-import org.wso2.carbon.la.log.agent.agentConf.Input;
-import org.wso2.carbon.la.log.agent.conf.LogGroup;
-import org.wso2.carbon.la.log.agent.conf.ServerConfig;
-import org.wso2.carbon.la.log.agent.data.LogEvent;
-import org.wso2.carbon.la.log.agent.data.LogPublisher;
-import org.wso2.carbon.la.log.agent.filters.AbstractFilter;
-import org.wso2.carbon.la.log.agent.util.PublisherUtil;
 
 /**
  * Reads log line by line
@@ -45,9 +56,9 @@ public class LogReader {
     private String streamId;
     private GroupElement groupElement;
     private String stringBuffer;
-    private boolean exFlag =false;
-    private String lastLogLine = null;
-    private LogEvent persistLog = null;
+    private boolean exFlag = false;
+    private LogEvent oldPersistLog = null;
+    private Long timestamp;
 
     /**
      * Allows output of a file that is being updated by another process.
@@ -59,7 +70,7 @@ public class LogReader {
         this.groupElement = groupElement;
         this.file = new File(this.groupElement.getConfig().getInput().getFile().getPath());
         setStreamId();
-        this.logPublisher=logPublisher;
+        this.logPublisher = logPublisher;
     }
 
     /**
@@ -93,7 +104,8 @@ public class LogReader {
     }
 
     public void setStreamId() {
-        this.streamId =DataBridgeCommonsUtils.generateStreamId(groupElement.getName(),groupElement.getVersion()); ;
+        this.streamId = DataBridgeCommonsUtils.generateStreamId(groupElement.getName(), groupElement.getVersion());
+        ;
     }
 
     private synchronized void updateOffset() {
@@ -152,42 +164,55 @@ public class LogReader {
         return lineCount;
     }
 
-
     private class TailLog implements Runnable {
         public void run() {
             while (!hasEnded()) {
                 while (linesAvailable()) {
-                    //System.out.println(getLineNumber() + ": " + getLine());
                     try {
                         String logLine = getLine();
                         if (logLine != null && logLine != "") {
-//                            logPublisher.publish(constructLogEvent(logLine), streamId);
                             LogEvent logEvent = constructLogEvent(logLine);
-                            if(stringBuffer==null && !logEvent.getExtractedValues().containsValue("ERROR")){
-                                logPublisher.publish(logEvent, streamId);
+                            if (logEvent.getExtractedValues().containsValue("ERROR")) {
+                                if (oldPersistLog == null) {
+                                    oldPersistLog = logEvent;
+                                } else {
+                                    LogEvent logEvent1 = new LogEvent();
+                                    logEvent1.setMessage(oldPersistLog.getMessage());
+                                    logEvent1.setExtractedValues(oldPersistLog.getExtractedValues());
+                                    logPublisher.publish(logEvent1, streamId);
+                                    oldPersistLog = logEvent;
+                                }
                             }
-                            if(logEvent.getExtractedValues().containsValue("ERROR")){
-                                persistLog = logEvent;
-                            }
-                            if(exFlag && stringBuffer!=null){
-                                Map<String, String> persistMap = persistLog.getExtractedValues();
-                                persistMap.put("trace",stringBuffer.toString());
-                                logEvent.setMessage(persistLog.getMessage());
-                                logEvent.setExtractedValues(persistMap);
-                                logPublisher.publish(logEvent, streamId);
+                            if (exFlag && stringBuffer != null) {
+                                Map<String, String> persistMap = oldPersistLog.getExtractedValues();
+                                persistMap.put("trace", stringBuffer.toString());
+                                LogEvent logEvent2 = new LogEvent();
+                                logEvent2.setMessage(oldPersistLog.getMessage());
+                                logEvent2.setExtractedValues(persistMap);
+                                logPublisher.publish(logEvent2, streamId);
                                 stringBuffer = null;
-                                exFlag =false;
-                                persistLog = null;
+                                exFlag = false;
+                            }
+                            if (stringBuffer == null && logEvent != null && !logEvent.getExtractedValues()
+                                    .containsValue("ERROR")) {
+                                if (oldPersistLog != null) {
+                                    LogEvent logEvent3 = new LogEvent();
+                                    logEvent3.setMessage(oldPersistLog.getMessage());
+                                    logEvent3.setExtractedValues(oldPersistLog.getExtractedValues());
+                                    logPublisher.publish(logEvent3, streamId);
+                                    oldPersistLog = null;
+                                }
+                                logPublisher.publish(logEvent, streamId);
                             }
                         }
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                    } catch (FileNotFoundException ex) {
+                        logger.log(Level.SEVERE, "Error reading", ex);
                     }
                 }
                 try {
                     Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                } catch (InterruptedException ex) {
+                    logger.log(Level.SEVERE, "Tail interrupted", ex);
                 }
             }
         }
@@ -212,7 +237,7 @@ public class LogReader {
                     Thread.sleep(500);
                 }
             } catch (InterruptedException ex) {
-                logger.info("Tail interrupted");
+                logger.log(Level.SEVERE, "Tail interrupted", ex);
             } catch (IOException ex) {
                 logger.log(Level.WARNING, "Tail failed", ex);
             } catch (ClosedWatchServiceException ex) {
@@ -222,7 +247,6 @@ public class LogReader {
         }
     }
 
-
     public boolean isReadFromTop() {
         return readFromTop;
     }
@@ -231,38 +255,48 @@ public class LogReader {
         this.readFromTop = readFromTop;
     }
 
-
     private LogEvent constructLogEvent(String logLine) {
         LogEvent logEvent = new LogEvent();
         logEvent.setMessage(logLine);
         logEvent.setExtractedValues(applyFilters(groupElement.getConfig().getFilter(), logLine));
+        logEvent.setTimeStamp(timestamp);
         return logEvent;
     }
 
-    private Map<String, String> applyFilters(Filter filter, String logLine){
+    private Map<String, String> applyFilters(Filter filter, String logLine) {
         Map<String, String> matchMap = new HashMap<String, String>();
-        for (int i=0;i<filter.getRegex().getMatch().length;i++)
-        {
-            String value = processRegEx(logLine,filter.getRegex().getMatch()[i][1]);
-            if(value!=null){
-                matchMap.put(filter.getRegex().getMatch()[i][0], value);
-                exFlag =true;
-            }else{
+        for (int i = 0; i < filter.getRegex().getMatch().length; i++) {
+            String value = processRegEx(logLine, filter.getRegex().getMatch()[i][1]);
+            if (value != null) {
+                if(filter.getRegex().getMatch()[i][0].contains("eventTimeStamp")){
+                    SimpleDateFormat sdf  = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+                    Date date = null;
+                    try {
+                        date = sdf.parse(value);
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    this.timestamp = date.getTime();
+                    matchMap.put(filter.getRegex().getMatch()[i][0], String.valueOf(timestamp));
+                }else{
+                    matchMap.put(filter.getRegex().getMatch()[i][0], value);
+                }
+                exFlag = true;
+            } else {
                 stringBuffer = stringBuffer + logLine;
-                exFlag =false;
+                exFlag = false;
             }
         }
         return matchMap;
     }
 
-    private String processRegEx(String logLine, String regEx){
+    private String processRegEx(String logLine, String regEx) {
         String value = null;
-        Pattern p = Pattern.compile(regEx);
-        Matcher m = p.matcher(logLine);
-        if (m.find())
-        {
-            value=m.group(0).toString();
+        Pattern pattern = Pattern.compile(regEx);
+        Matcher matcher = pattern.matcher(logLine);
+        if (matcher.find()) {
+            value = matcher.group(0).toString();
         }
-        return  value;
+        return value;
     }
 }
