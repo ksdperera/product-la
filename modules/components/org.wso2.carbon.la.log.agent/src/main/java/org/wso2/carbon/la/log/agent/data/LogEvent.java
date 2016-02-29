@@ -9,8 +9,10 @@ import java.util.Map;
 public class LogEvent {
 
     private String host;
-
     private String message;
+    private String type;
+    private Long timeStamp;
+    private String className;
 
     private Map<String, String> extractedValues = new HashMap<String, String>();
 
@@ -28,6 +30,30 @@ public class LogEvent {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public void setTimeStamp(Long timeStamp) {
+        this.timeStamp = timeStamp;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Long getTimeStamp() {
+        return timeStamp;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public Map<String, String> getExtractedValues() {
