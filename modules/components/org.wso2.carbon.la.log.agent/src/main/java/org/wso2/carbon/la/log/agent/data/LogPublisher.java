@@ -24,29 +24,31 @@ import org.wso2.carbon.databridge.agent.exception.DataEndpointConfigurationExcep
 import org.wso2.carbon.databridge.agent.exception.DataEndpointException;
 import org.wso2.carbon.databridge.commons.Event;
 import org.wso2.carbon.databridge.commons.exception.*;
-import org.wso2.carbon.la.log.agent.conf.ServerConfig;
+import org.wso2.carbon.la.log.agent.agentConf.ConfigLogAgent;
+import org.wso2.carbon.la.log.agent.util.DataPublisherUtil;
+import org.wso2.carbon.la.log.agent.agentConf.Loganalyzer;
 import org.wso2.carbon.la.log.agent.util.EventConfigUtil;
-
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
-
+import java.util.logging.Logger;
 
 public class LogPublisher {
-
-    private ServerConfig serverConfig;
+    private static final Logger logger = Logger.getLogger("LogPublisher");
+    private Loganalyzer loganalyzer;
     private static DataPublisher dataPublisher;
+    private DataPublisherUtil dataPublisherUtil = new DataPublisherUtil();
+    private ConfigLogAgent configLogAgent;
 
-    public LogPublisher(ServerConfig serverConfig) {
-        this.serverConfig = serverConfig;
-        AgentHolder.setConfigPath(getDataAgentConfigPath());
-        String currentDir = System.getProperty("user.dir");
-        System.setProperty("javax.net.ssl.trustStore", currentDir + "/src/main/resources/client-truststore.jks");
-        System.setProperty("javax.net.ssl.trustStorePassword", "wso2carbon");
+    public LogPublisher(ConfigLogAgent configLogAgent)
+            throws DataEndpointAuthenticationException, DataEndpointAgentConfigurationException, TransportException,
+            DataEndpointException, DataEndpointConfigurationException {
+        this.configLogAgent = configLogAgent;
+        this.loganalyzer = configLogAgent.getOutput().getLoganalyzer();
+        AgentHolder.setConfigPath(dataPublisherUtil.getDataAgentConfigPath());
         try {
-            dataPublisher = new DataPublisher("Thrift", serverConfig.getUrl(), serverConfig.getSecureUrl(),
-                    serverConfig.getUsername(),
-                    serverConfig.getPassword());
+            dataPublisher = new DataPublisher("Thrift", "tcp://" + loganalyzer.getHost() + ":" + loganalyzer.getPort(),
+                    "ssl://" + loganalyzer.getHost() + ":" + (loganalyzer.getPort() + 100), loganalyzer.getUser_name(),
+                    loganalyzer.getPassword());
         } catch (DataEndpointAgentConfigurationException e) {
             e.printStackTrace();
         } catch (DataEndpointException e) {
@@ -60,28 +62,16 @@ public class LogPublisher {
         }
     }
 
-    public static String getDataAgentConfigPath() {
-        File filePath = new File("src" + File.separator + "main" + File.separator + "resources");
-        if (!filePath.exists()) {
-            filePath = new File("test" + File.separator + "resources");
-        }
-        if (!filePath.exists()) {
-            filePath = new File("resources");
-        }
-        if (!filePath.exists()) {
-            filePath = new File("test" + File.separator + "resources");
-        }
-        return filePath.getAbsolutePath() + File.separator + "data-agent-conf.xml";
-    }
-
     public void publish(LogEvent logEvent, String streamId) throws FileNotFoundException {
-
-        List<Object> payLoadData = EventConfigUtil.getEventData(logEvent);
+        List<String> payLoadData = Arrays.asList(configLogAgent.getAgentid());
         Map<String, String> arbitraryDataMap = EventConfigUtil.getExtractedDataMap(logEvent);
-
-        Event event = new Event(streamId, System.currentTimeMillis(), null, null,
-                payLoadData.toArray(), arbitraryDataMap);
-        dataPublisher.publish(event); // shutdown publisher????
+        arbitraryDataMap.put("message",EventConfigUtil.getEventData(logEvent).toString());
+        if (payLoadData != null && arbitraryDataMap != null) {
+            Event event = new Event(streamId, System.currentTimeMillis(), null, null, payLoadData.toArray(),
+                    arbitraryDataMap);
+            dataPublisher.publish(event);
+            System.out.println(event.toString());
+        }
     }
 
 }
