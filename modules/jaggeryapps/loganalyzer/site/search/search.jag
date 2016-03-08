@@ -175,6 +175,9 @@
                             <div id="search-btn-area" class="btn-group-actions">
                                 <button class="btn btn-main" id="search-btn" onclick="searchActivities()">Search</button>
                             </div>
+                            <div id="visualize-btn-area" class="btn-group-actions">
+                                <button class="btn btn-main" id="visualize-btn" onclick="openDashboard()">Visualize</button>
+                            </div>
                             <select id="save-options" class="drop-down-fixed">
                                 <option disabled="disabled" style="display: none" selected="selected">Download As</option>
                                 <optgroup label="Download As">
@@ -182,8 +185,15 @@
                                     <option value="csv">CSV</option>
                                 </optgroup>
                                 <option value="alert">Alert</option>
-                            </select>
+                            </select><br>
+                            <p id="logpath" value="None"></p>
+                            <input type="hidden" id="facetPath" value="None">
 
+                            <div id="logStreamData" class="logstreamTest">
+                                <label>Logstream</label>
+                                <select id="0" name="logstreamSelect1" onchange="addChildLogStream1(this.value,this.id)"><option value="None">All</option></select>
+                            </div>
+                            <p id="logTest"></p>
                             <div  id="tab-preview" class="wr-form col-lg-12 col-left">
                                 <table id="results-table" class="table table-hover">
                                     <thead>
@@ -194,10 +204,12 @@
                                 </table>
                             </div>
                         </div>
-                    </div>
-                </div>
 
+                    </div>
+
+                </div>
 		    </div>
+
                 <!-- /content -->
             </div>
         </div>
@@ -217,6 +229,7 @@
     <script src="../../js/plugins/jspdf/split_text_to_size.js"></script>
     <script src="../../js/plugins/jspdf/from_html.js"></script>
     <script src="../../js/plugins/jspdf/cell.js"></script>
+    <!--script src="../../js/visualize.js"></script-->
     <script src="search.js"></script>
 </body>
 

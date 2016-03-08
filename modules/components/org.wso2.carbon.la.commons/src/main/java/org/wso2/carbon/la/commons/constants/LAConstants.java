@@ -39,8 +39,19 @@ public class LAConstants {
     public static final String LOG_TIMESTAMP = "@timestamp";
     public static final String LOG_TIMESTAMP_LONG = "@timestamp_long";
     public static final String DAS_TIMESTAMP_FIELD = "_timestamp";
+    public static final String LOGSTREAM = "logstream";
+    public static final String TIMESTAMP_FIELD = "_eventTimeStamp";
+
+    public static final long EPOCH_DAYGAP = 86400000;
 
     public static final String EVENT_STREAM_PERSIST_ADMINSERVICE = "EventStreamPersistenceAdminService";
+
+    //Date format constants
+    public static final String TIMESTAMP_PATTERN = "yyyy-MM-dd";
+    public static final String DAY_PATTERN = "yyyy-MM-dd";
+    public static final String WEEK_PATTERN = "Y/MM:W";
+    public static final String MONTH_PATTERN = "Y-MM";
+    public static final String YEAR_PATTERN = "YYYY";
 
     // Data-set upload configurations    
     public static final String UPLOAD_SETTINGS = "dataUploadSettings";

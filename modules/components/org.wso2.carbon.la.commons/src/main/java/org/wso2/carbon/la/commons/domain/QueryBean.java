@@ -25,18 +25,89 @@ import java.util.Map;
 
 
 public class QueryBean {
-    /** The table name. */
+    /**
+     * The table name.
+     */
     private String tableName;
 
     private String query;
 
     private int start;
 
-    private int count;
-
     private long timeFrom;
 
     private long timeTo;
+
+    private String facetPath;
+
+    private String str_timeFrom;
+    private String str_timeTo;
+
+    public String getStr_timeFrom(){ return str_timeFrom; }
+
+    public void setStr_timeFrom(String str_timeFrom) {
+        this.str_timeFrom = str_timeFrom;
+    }
+
+    public void setStr_timeTo(String str_timeTo){
+        this.str_timeTo = str_timeTo;
+    }
+
+    public String getStr_timeTo(){ return str_timeTo; }
+
+    public int getLength() {
+        return length;
+    }
+
+    public String getFacetPath(){return facetPath;}
+
+    public void setFacetPath(String facetPath){this.facetPath=facetPath;}
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getDraw() {
+        return draw;
+    }
+
+    public void setDraw(int draw) {
+        this.draw = draw;
+    }
+
+    public Object getColumns() {
+        return columns;
+    }
+
+    public void setColumns(Object columns) {
+        this.columns = columns;
+    }
+
+    public Object getOrder() {
+        return order;
+    }
+
+    public void setOrder(Object order) {
+        this.order = order;
+    }
+
+    public Object getSearch() {
+        return search;
+    }
+
+    public void setSearch(Object search) {
+        this.search = search;
+    }
+
+    private int length;
+
+    private int draw;
+
+    private Object columns;
+
+    private Object order;
+
+    private Object search;
 
     public String getTableName() {
         return tableName;
@@ -60,14 +131,6 @@ public class QueryBean {
 
     public void setStart(int start) {
         this.start = start;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 
     public long getTimeFrom() {

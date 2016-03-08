@@ -24,6 +24,7 @@ import org.wso2.carbon.context.PrivilegedCarbonContext;
 import org.wso2.carbon.la.commons.constants.LAConstants;
 import org.wso2.carbon.la.commons.domain.QueryBean;
 import org.wso2.carbon.la.commons.domain.RecordBean;
+import org.wso2.carbon.la.commons.domain.ResponseBean;
 import org.wso2.carbon.la.core.impl.SearchController;
 import org.wso2.carbon.la.restapi.beans.LAErrorBean;
 
@@ -58,12 +59,16 @@ public class SearchApiV10 extends LARestApi{
     @Path("/")
     public Response search(QueryBean queryBean) {
         PrivilegedCarbonContext carbonContext = PrivilegedCarbonContext.getThreadLocalCarbonContext();
-        int tenantId = carbonContext.getTenantId();
         String username = carbonContext.getUsername();
         queryBean.setTableName(LAConstants.LOG_ANALYZER_STREAM_NAME);
         try {
             List<RecordBean> recordBeans = searchController.search(queryBean, username);
-            return Response.ok(recordBeans).build();
+            ResponseBean responseBean = new ResponseBean();
+            responseBean.setDraw(queryBean.getDraw());
+            responseBean.setRecordsTotal(searchController.getRecordCount(username, queryBean));
+            responseBean.setRecordsFiltered(searchController.getRecordCount(username, queryBean));
+            responseBean.setData(recordBeans);
+            return Response.ok(responseBean).build();
         } catch (AnalyticsException e) {
             String msg = String.format( "Error occurred while searching");
             log.error(msg, e);

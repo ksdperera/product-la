@@ -518,7 +518,7 @@
         <carbon.kernel.version>4.4.3</carbon.kernel.version>
         <commons.io.version>2.4</commons.io.version>
         <carbon.analytics.version>1.0.6-SNAPSHOT</carbon.analytics.version>
-        <carbon.analytics.common.version>5.0.10-SNAPSHOT</carbon.analytics.common.version>
+        <carbon.analytics.common.version>5.0.11-SNAPSHOT</carbon.analytics.common.version>
         <carbon.automationutils.version>4.4.1</carbon.automationutils.version>
         <carbon.automation.version>4.4.2</carbon.automation.version>
         <carbon.registry.version>4.4.8</carbon.registry.version>
@@ -527,7 +527,7 @@
         <carbon.identity.version>4.5.6</carbon.identity.version>
         <carbon.commons.version>4.4.8</carbon.commons.version>
         <carbon.data.version>4.3.4</carbon.data.version>
-        <carbon.event-processing.version>2.0.11</carbon.event-processing.version>
+        <carbon.event-processing.version>2.0.12</carbon.event-processing.version>
         <carbon.dashboard.version>1.0.7</carbon.dashboard.version>
         <carbon.metrics.version>1.1.1</carbon.metrics.version>
 

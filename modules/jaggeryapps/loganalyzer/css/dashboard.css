@@ -1,0 +1,122 @@
+.dashboardNav {
+    line-height:30px;
+    background-color:#eeeeee;
+
+    width:20%;
+    float:left;
+    padding:20px 15px;
+    position: absolute;
+    clear:both;
+
+}
+.backgroundPut{
+    background-color:#eeeeee;
+
+    width:20%;
+    float:left;
+    padding:20px 15px;
+
+    clear:both;
+}
+.dashboard{
+    background-color:#eeeeee;
+    height: 100%;
+}
+.dsWelcome{
+    font-family:'MS Sans Serif', sans-serif, Verdana, Arial;
+    padding:25px 25px;
+    background-color:#eeeeee;
+    top: 40%;
+    left: 40%;
+    border-radius: 49px 0px 53px 0px;
+    -moz-border-radius: 49px 0px 53px 0px;
+    -webkit-border-radius: 49px 0px 53px 0px;
+    border: 0px dotted #000000;
+    position: fixed;
+    color: gray;
+
+}
+
+.dashboardNav p{
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 19px;
+    margin: 0px 0px 20px;
+    color: #533565;
+    border-bottom: 1px solid #E4E4E4;
+
+}
+
+
+.dashboardNav select{
+    margin: 0px 0px 20px;
+    background-color: ghostwhite;
+    width:100%;
+    border: 1px solid #C0C0C0;
+
+}
+
+.dashboardNav label{
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 16px;
+    color: #533565;
+
+}
+
+.dashboardNav button{
+    width: 100%;
+    background:#6c5c76;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    color:#fff;
+    font-size:14px;
+    margin: 20px 0px 20px;
+}
+
+.dashboardNav input{
+    width: 100%;
+    font-size:14px;
+    margin: 0px 0px 20px;
+}
+
+.logStreamDiv select{
+    margin: 0px 0px 20px;
+    background-color: ghostwhite;
+    width:20%;
+    border: 1px solid #C0C0C0;
+}
+
+.dashboardNav form{
+    margin: 0px 0px 20px;
+}
+
+.graphsDiv h4{
+    color: #533565;
+}
+.dashboardNav h2{
+    font-family: "Georgia,serif";
+    alignn : center;
+    font-weight: 400;
+    font-size: 22px;
+
+    color: #533565;
+    border-bottom: 2px solid #E4E4E4;
+
+}
+
+.dashboardSection {
+    width:80%;
+    float:right;
+    padding:10px;
+    position: relative;
+}
+.dsDatePicker{
+    padding: 15px 5px;
+    position: absolute;
+    right : 0;
+
+}
+.dsDatePicker label{
+    color: #ffffff;
+}

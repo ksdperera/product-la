@@ -1286,6 +1286,10 @@ a.cu-level3-btn:hover {
 	width:250px !important;
 	font-weight:100 !important;
 }
+.select{
+    width:250px !important;
+    font-weight:100 !important;
+}
 
 .select2-container--default .select2-selection--single {
 	border-radius:0px !important;	
@@ -1701,6 +1705,24 @@ fieldset[disabled] .btn-primary.active {
 .highlight {
 	background: greenyellow;
 	text-decoration: underline;
+}
+.logstreamTest{
+    float:left;
+}
+.logstreamTest select{
+    margin: 0px 0px 20px;
+    background-color: ghostwhite;
+    width:200px;
+    border: 1px solid #C0C0C0;
+}
+
+.logstreamTest label{
+    font-family: "Open Sans";
+    margin: 0px 0px 20px;
+    padding:25px 25px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #533565;
 }
 
 .light
