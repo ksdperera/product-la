@@ -1,0 +1,21 @@
+{
+  "id": "security-concerns",
+  "title": "Security Concerns",
+  "type": "gadget",
+  "thumbnail": "store://gadget/security-concerns/img/thumbnail.png",
+  "data": {
+    "url": "store://gadget/security-concerns/index.xml"
+  },
+  "notify": {
+    "publisher": {
+      "type": "filter",
+      "description": "This notifies selected filter"
+    }
+  },
+  "listen": {
+    "subscriber": {
+      "type": "filter",
+      "description": "Used to listen to any filters"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "logAnalyzer",
+  "title": "Average server up time",
+  "type": "gadget",
+  "thumbnail": "store://gadget/ServerUpTimeChart/img/thumbnail.png",
+  "data": {
+    "url": "store://gadget/ServerUpTimeChart/index.xml"
+  },
+  "notify": {
+    "publisher": {
+      "type": "filter",
+      "description": "This notifies selected filter"
+    }
+  },
+  "listen": {
+    "subscriber": {
+      "type": "filter",
+      "description": "Used to listen to any filters"
+    }
+  }
+}

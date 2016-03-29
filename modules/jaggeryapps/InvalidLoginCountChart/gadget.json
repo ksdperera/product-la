@@ -1,0 +1,21 @@
+{
+  "id": "logAnalyzer2",
+  "title": "Invalid login count",
+  "type": "gadget",
+  "thumbnail": "store://gadget/InvalidLoginCountChart/img/thumbnail.png",
+  "data": {
+    "url": "store://gadget/InvalidLoginCountChart/index.xml"
+  },
+  "notify": {
+    "publisher": {
+      "type": "filter",
+      "description": "This notifies selected filter"
+    }
+  },
+  "listen": {
+    "subscriber": {
+      "type": "filter",
+      "description": "Used to listen to any filters"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "logErrorByMessage",
+  "title": "Log ERROR by Message",
+  "type": "gadget",
+  "thumbnail": "store://gadget/logErrorByMessage/img/thumbnail.png",
+  "data": {
+    "url": "store://gadget/logErrorByMessage/index.xml"
+  },
+  "notify": {
+    "publisher": {
+      "type": "filter",
+      "description": "This notifies selected filter"
+    }
+  },
+  "listen": {
+    "subscriber": {
+      "type": "date-range",
+      "description": "Used to listen to any date range-selected"
+    }
+  }
+}

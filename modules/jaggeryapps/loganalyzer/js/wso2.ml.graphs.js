@@ -700,3 +700,7 @@ var PlottingError = function (message) {
     this.stack = (new Error()).stack;
 };
 PlottingError.prototype = Object.create(Error.prototype);
+
+
+
+
