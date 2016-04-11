@@ -39,15 +39,13 @@ public class LogPublisher {
     private DataPublisherUtil dataPublisherUtil = new DataPublisherUtil();
     private ConfigLogAgent configLogAgent;
 
-    public LogPublisher(ConfigLogAgent configLogAgent)
-            throws DataEndpointAuthenticationException, DataEndpointAgentConfigurationException, TransportException,
-            DataEndpointException, DataEndpointConfigurationException {
+    public LogPublisher(ConfigLogAgent configLogAgent){
         this.configLogAgent = configLogAgent;
         this.loganalyzer = configLogAgent.getOutput().getLoganalyzer();
         AgentHolder.setConfigPath(dataPublisherUtil.getDataAgentConfigPath());
         try {
-            dataPublisher = new DataPublisher("Thrift", "tcp://" + loganalyzer.getHost() + ":" + loganalyzer.getPort(),
-                    "ssl://" + loganalyzer.getHost() + ":" + (loganalyzer.getPort() + 100), loganalyzer.getUser_name(),
+            dataPublisher = new DataPublisher("Thrift", "tcp://" + loganalyzer.getHost() + ":" + loganalyzer.getThrift_port(),
+                    "ssl://" + loganalyzer.getHost() + ":" + (loganalyzer.getThrift_port() + 100), loganalyzer.getUser_name(),
                     loganalyzer.getPassword());
         } catch (DataEndpointAgentConfigurationException e) {
             e.printStackTrace();

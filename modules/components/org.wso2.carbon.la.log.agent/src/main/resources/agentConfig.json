@@ -5,7 +5,8 @@
   "output": {
     "loganalyzer": {
       "host": "localhost",
-      "port": 7611,
+      "port": 10143,
+      "thrift_port":8311,
       "user_name" : "admin",
       "password" : "admin"
     }
@@ -17,7 +18,7 @@
       "config": {
         "input": {
           "file": {
-            "path": "/home/sajithd/Downloads/wso2carbon-benchmark1.log",
+            "path": "/home/sajithd/WSO2_LogAnalyzer/product-la/modules/components/org.wso2.carbon.la.log.agent/src/main/resources/wso2carbon.log",
             "start_position": "beginning"
           }
         },
@@ -26,7 +27,8 @@
             "match": [
               ["level", "(INFO|DEBUG|ERROR|WARN|ALL|TRACE|OFF|FATAL)"],
               ["eventTimeStamp","\\d{4}-\\d{2}-\\d{2}\\s\\d{2}:\\d{2}:\\d{2}"],
-              ["class","\\{([a-z]{2,3}(\\.[a-zA-Z][a-zA-Z_$0-9]*)*)\\.([A-Z][a-zA-Z_$0-9]*)\\}"]
+              ["class","\\{([a-z]{2,3}(\\.[a-zA-Z][a-zA-Z_$0-9]*)*)\\.(([A-Z][a-zA-Z_$0-9]*)|([a-z][a-zA-Z_$0-9]*))\\}"],
+              ["content","(?<=\\s-\\s)(.*)(?=)"]
             ]
           }
         }

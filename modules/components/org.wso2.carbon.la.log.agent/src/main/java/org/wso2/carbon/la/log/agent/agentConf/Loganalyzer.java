@@ -20,7 +20,7 @@ package org.wso2.carbon.la.log.agent.agentConf;
 
 public class Loganalyzer {
     private String host;
-    private String thrift_port;
+    private Integer thrift_port;
     private Integer port;
     private String user_name;
     private String password;
@@ -57,11 +57,11 @@ public class Loganalyzer {
         return host;
     }
 
-    public void setThrift_port(String thrift_port) {
+    public void setThrift_port(Integer thrift_port) {
         this.thrift_port = thrift_port;
     }
 
-    public String getThrift_port() {
+    public Integer getThrift_port() {
         return thrift_port;
     }
 }

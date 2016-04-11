@@ -18,22 +18,29 @@
 
 package org.wso2.carbon.la.log.agent.util;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
 
 public class DataPublisherUtil {
+    private static Log log = LogFactory.getLog(DataPublisherUtil.class);
+
     public String getDataAgentConfigPath() {
-//        File jarPath = null;
-//
-//        final Class<?> referenceClass = DataPublisherUtil.class;
-//        final URL url =
-//                referenceClass.getProtectionDomain().getCodeSource().getLocation();
-//        try{
-//            jarPath = new File(url.toURI()).getParentFile();
-//        } catch(final URISyntaxException e){
-//        }
-//        return jarPath + File.separator+"data-agent-conf.xml";
-        return "/home/sajithd/WSO2_LogAnalyzer/product-la/modules/components/org.wso2.carbon.la.log.agent/src/main/resources/data-agent-conf.xml";
+        File file  = new File("../config/data-agent-conf.xml");
+        String thriftConfigPath = null;
+        if(file.exists()){
+            thriftConfigPath = file.getPath();
+        }else{
+            URL url = DataPublisherUtil.class.getResource("/agentConfig.json");
+            try {
+                thriftConfigPath = new File(url.toURI()).getAbsolutePath();
+            } catch (URISyntaxException e) {
+                log.error("Error in loading thrift config file");
+            }
+        }
+        return thriftConfigPath;
     }
 }

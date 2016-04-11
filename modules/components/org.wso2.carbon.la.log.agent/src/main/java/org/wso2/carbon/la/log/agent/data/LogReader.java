@@ -55,8 +55,8 @@ public class LogReader {
     private LogPublisher logPublisher;
     private String streamId;
     private GroupElement groupElement;
-    private String stringBuffer;
-    private boolean exFlag = false;
+    private StringBuffer stringBuffer = new StringBuffer("");
+    private boolean isBufferEnd = false;
     private LogEvent oldPersistLog = null;
     private Long timestamp;
 
@@ -183,17 +183,18 @@ public class LogReader {
                                     oldPersistLog = logEvent;
                                 }
                             }
-                            if (exFlag && stringBuffer != null) {
+                            if (isBufferEnd && stringBuffer.length() !=0) {
                                 Map<String, String> persistMap = oldPersistLog.getExtractedValues();
                                 persistMap.put("trace", stringBuffer.toString());
                                 LogEvent logEvent2 = new LogEvent();
                                 logEvent2.setMessage(oldPersistLog.getMessage());
                                 logEvent2.setExtractedValues(persistMap);
                                 logPublisher.publish(logEvent2, streamId);
-                                stringBuffer = null;
-                                exFlag = false;
+                                stringBuffer.delete(0, stringBuffer.length());
+                                stringBuffer.append("");
+                                isBufferEnd = false;
                             }
-                            if (stringBuffer == null && logEvent != null && !logEvent.getExtractedValues()
+                            if (stringBuffer.length()==0 && logEvent != null && !logEvent.getExtractedValues()
                                     .containsValue("ERROR")) {
                                 if (oldPersistLog != null) {
                                     LogEvent logEvent3 = new LogEvent();
@@ -207,7 +208,7 @@ public class LogReader {
                         }
                     } catch (FileNotFoundException ex) {
                         logger.log(Level.SEVERE, "Error reading", ex);
-                    }
+                     }
                 }
                 try {
                     Thread.sleep(500);
@@ -281,10 +282,10 @@ public class LogReader {
                 }else{
                     matchMap.put(filter.getRegex().getMatch()[i][0], value);
                 }
-                exFlag = true;
-            } else {
-                stringBuffer = stringBuffer + logLine;
-                exFlag = false;
+                isBufferEnd = true;
+            } else if (oldPersistLog != null && oldPersistLog.getExtractedValues().containsValue("ERROR")) {
+                stringBuffer.append(logLine);
+                isBufferEnd = false;
             }
         }
         return matchMap;

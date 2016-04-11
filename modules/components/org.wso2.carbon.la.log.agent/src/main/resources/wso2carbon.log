@@ -1,0 +1,333 @@
+TID: [-1] [] [2015-12-14 15:22:41,166]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk520388833/ 
+TID: [-1] [] [2015-12-14 15:22:41,162]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk520388833/ 
+TID: [-1234] [] [2015-12-14 15:22:41,370]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... 
+TID: [-1234] [] [2015-12-14 15:22:41,370]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Linux 3.13.0-66-generic, amd64 
+TID: [-1234] [] [2015-12-14 15:22:41,370]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /usr/lib/jvm/jdk1.7.0_65/jre 
+TID: [-1234] [] [2015-12-14 15:22:41,371]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.7.0_65 
+TID: [-1234] [] [2015-12-14 15:22:41,371]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : Java HotSpot(TM) 64-Bit Server VM 24.65-b04,Oracle Corporation 
+TID: [-1234] [] [2015-12-14 15:22:41,371]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT 
+TID: [-1234] [] [2015-12-14 15:22:41,371]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/tmp 
+TID: [-1234] [] [2015-12-14 15:22:41,371]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : anuruddha, en-US, Asia/Colombo 
+TID: [-1234] [] [2015-12-14 15:22:41,443]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. 
+TID: [-1] [] [2015-12-14 15:22:41,625]  INFO {org.wso2.carbon.event.output.adapter.kafka.internal.ds.KafkaEventAdapterServiceDS} -  Successfully deployed the Kafka output event adaptor service 
+TID: [-1234] [] [2015-12-14 15:22:42,866]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver} -  Started Binary SSL Transport on port : 9711 
+TID: [-1234] [] [2015-12-14 15:22:42,867]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver} -  Started Binary TCP Transport on port : 9611 
+TID: [-1234] [] [2015-12-14 15:22:42,874]  INFO {org.wso2.carbon.databridge.core.internal.DataBridgeDS} -  Successfully deployed Agent Server  
+TID: [-1234] [] [2015-12-14 15:22:43,027]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 88ms 
+TID: [-1234] [] [2015-12-14 15:22:43,095]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE 
+TID: [-1234] [] [2015-12-14 15:22:44,094]  INFO {org.wso2.carbon.metrics.impl.MetricServiceImpl} -  Creating JDBC reporter for Metrics with source 'anuruddha', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period 
+TID: [-1234] [] [2015-12-14 15:22:44,095]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics 
+TID: [-1234] [] [2015-12-14 15:22:44,123]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics 
+TID: [-1234] [] [2015-12-14 15:22:45,419]  INFO {org.wso2.carbon.registry.indexing.solr.SolrClient} -  Default Embedded Solr Server Initialized 
+TID: [-1234] [] [2015-12-14 15:22:45,557]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. 
+TID: [-1] [] [2015-12-14 15:22:49,617]  INFO {org.apache.catalina.startup.TaglibUriRule} -  TLD skipped. URI: http://tiles.apache.org/tags-tiles is already defined 
+TID: [-1234] [] [2015-12-14 15:22:50,186]  INFO {org.apache.axis2.deployment.ClusterBuilder} -  Clustering has been disabled 
+TID: [-1234] [] [2015-12-14 15:22:50,289]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. 
+TID: [-1234] [] [2015-12-14 15:22:50,289]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. 
+TID: [-1234] [] [2015-12-14 15:22:50,334]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: addressing-1.6.1-wso2v15 - file:/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/client/modules/addressing-1.6.1-wso2v15.mar 
+TID: [-1234] [] [2015-12-14 15:22:50,871]  WARN {org.apache.axis2.description.java2wsdl.DefaultSchemaGenerator} -  We don't support method overloading. Ignoring [validateAudienceRestriction] 
+TID: [-1234] [] [2015-12-14 15:22:51,119]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: org.wso2.carbon.tryit-4.4.8 -  
+TID: [-1234] [] [2015-12-14 15:22:51,336]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Repository       : /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/ 
+TID: [-1] [] [2015-12-14 15:22:51,338]  INFO {org.wso2.carbon.event.input.adapter.kafka.internal.ds.KafkaEventAdapterServiceHolder} -  Kafka input event adaptor waiting for dependent configurations to load 
+TID: [-1234] [] [2015-12-14 15:22:51,363]  INFO {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig} -  Using tenant lazy loading policy... 
+TID: [-1234] [] [2015-12-14 15:22:51,370]  INFO {org.wso2.carbon.core.internal.permission.update.PermissionUpdater} -  Permission cache updated for tenant -1234 
+TID: [-1234] [] [2015-12-14 15:22:51,480]  INFO {org.wso2.carbon.core.transports.http.HttpsTransportListener} -  HTTPS port       : 9443 
+TID: [-1234] [] [2015-12-14 15:22:51,481]  INFO {org.wso2.carbon.core.transports.http.HttpTransportListener} -  HTTP port        : 9763 
+TID: [-1234] [] [2015-12-14 15:22:51,515]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : loganalyzer:1.0.0 
+TID: [-1234] [] [2015-12-14 15:22:52,568]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Mon Dec 14 15:22:52 IST 2015]; root of context hierarchy 
+TID: [-1234] [] [2015-12-14 15:22:52,600]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] 
+TID: [-1234] [] [2015-12-14 15:22:52,653]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from URL [jndi:/localhost/analytics/WEB-INF/cxf-servlet.xml] 
+TID: [-1234] [] [2015-12-14 15:22:52,726]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b1e037d: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,analyticsServices,analyticsBean,analyticsExceptionMapper,analyticsIndexExceptionMapper,analyticsTableNotFoundExceptionMapper,analyticsTimeoutExceptionMapper,jacksonJsonProvider,httpHeadersOutInterceptor]; root of factory hierarchy 
+TID: [-1234] [] [2015-12-14 15:22:53,022]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / 
+TID: [-1234] [] [2015-12-14 15:22:53,084]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/analytics].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/analytics.war] 
+TID: [-1234] [] [2015-12-14 15:22:53,442]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization started 
+TID: [-1234] [] [2015-12-14 15:22:53,457]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Mon Dec 14 15:22:53 IST 2015]; root of context hierarchy 
+TID: [-1234] [] [2015-12-14 15:22:53,482]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml] 
+TID: [-1234] [] [2015-12-14 15:22:53,510]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] 
+TID: [-1234] [] [2015-12-14 15:22:53,526]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml] 
+TID: [-1234] [] [2015-12-14 15:22:53,663]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7adca6c8: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer#0,org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer#0,services,basicAuthenticationFilter,sessionAuthenticationFilter]; root of factory hierarchy 
+TID: [-1234] [] [2015-12-14 15:22:53,847]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / 
+TID: [-1234] [] [2015-12-14 15:22:53,878]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization completed in 436 ms 
+TID: [-1234] [] [2015-12-14 15:22:53,883]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/api].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/api.war] 
+TID: [-1234] [] [2015-12-14 15:22:53,923]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/inputwebsocket].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/inputwebsocket.war] 
+TID: [-1234] [] [2015-12-14 15:22:54,332]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / 
+TID: [-1234] [] [2015-12-14 15:22:54,368]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputui].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/outputui.war] 
+TID: [-1234] [] [2015-12-14 15:22:54,390]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputwebsocket].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/outputwebsocket.war] 
+TID: [-1234] [] [2015-12-14 15:22:55,811]  INFO {net.sf.ehcache.pool.sizeof.filter.AnnotationSizeOfFilter} -  Using regular expression provided through VM argument net.sf.ehcache.pool.sizeof.ignore.pattern for IgnoreSizeOf annotation : ^.*cache\..*IgnoreSizeOf$ 
+TID: [-1234] [] [2015-12-14 15:22:55,813]  INFO {net.sf.ehcache.pool.impl.DefaultSizeOfEngine} -  Using user supplied filter @ jar:file:/media/anuruddha/enterprise/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/shindig/WEB-INF/lib/shindig-common-2.5.2.jar!/org/apache/shindig/common/cache/ehcache/SizeOfFilter.txt 
+TID: [-1234] [] [2015-12-14 15:22:55,820]  INFO {net.sf.ehcache.pool.sizeof.JvmInformation} -  Detected JVM data model settings of: 64-Bit HotSpot JVM with Compressed OOPs 
+TID: [-1234] [] [2015-12-14 15:22:56,047]  INFO {net.sf.ehcache.pool.sizeof.AgentLoader} -  Extracted agent jar to temporary file /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/tmp/ehcache-sizeof-agent4273142979507601563.jar 
+TID: [-1234] [] [2015-12-14 15:22:56,047]  INFO {net.sf.ehcache.pool.sizeof.AgentLoader} -  Trying to load agent @ /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/tmp/ehcache-sizeof-agent4273142979507601563.jar 
+TID: [-1234] [] [2015-12-14 15:22:56,050]  INFO {net.sf.ehcache.pool.impl.DefaultSizeOfEngine} -  using Agent sizeof engine 
+TID: [-1234] [] [2015-12-14 15:22:56,102]  INFO {net.sf.ehcache.pool.impl.DefaultSizeOfEngine} -  using Agent sizeof engine 
+TID: [-1234] [] [2015-12-14 15:22:56,120]  INFO {org.apache.shindig.gadgets.features.FeatureRegistry} -  Resources from res:features/features.txt are loading. 
+TID: [-1234] [] [2015-12-14 15:22:56,126]  INFO {org.apache.shindig.common.xml.XmlUtil} -  The XML processor being used does not support secure parsing. 
+TID: [-1234] [] [2015-12-14 15:22:56,126]  INFO {org.apache.shindig.common.xml.XmlUtil} -  Document builders are being reused. 
+TID: [-1234] [] [2015-12-14 15:22:56,332]  INFO {org.apache.shindig.gadgets.features.FeatureRegistry} -  Resources from res:features-extras/features.txt are loading. 
+TID: [-1234] [] [2015-12-14 15:23:16,389]  INFO {org.apache.shindig.gadgets.http.BasicHttpFetcher} -  http://www.google-analytics.com/urchin.js has timed out because of the following exception: org.apache.shindig.gadgets.http.BasicHttpFetcher - www.google-analytics.com - 20,051 ms. 
+TID: [-1234] [] [2015-12-14 15:23:16,452]  WARN {org.apache.shindig.gadgets.features.FeatureResourceLoader} -  The remote library from http://www.google-analytics.com/urchin.js cannot be retrieved. 
+TID: [-1234] [] [2015-12-14 15:23:28,016]  INFO {org.apache.shindig.gadgets.http.BasicHttpFetcher} -  http://www.google.com/ig/lib/libanalytics.js has timed out because of the following exception: org.apache.shindig.gadgets.http.BasicHttpFetcher - www.google.com - 11,563 ms. 
+TID: [-1234] [] [2015-12-14 15:23:28,017]  WARN {org.apache.shindig.gadgets.features.FeatureResourceLoader} -  The remote library from http://www.google.com/ig/lib/libanalytics.js cannot be retrieved. 
+TID: [-1234] [] [2015-12-14 15:23:28,020]  INFO {org.apache.shindig.gadgets.http.BasicHttpFetcher} -  http://www.google.com/ig/lib/libga.js has timed out because of the following exception: org.apache.shindig.gadgets.http.BasicHttpFetcher - www.google.com - 1 ms. 
+TID: [-1234] [] [2015-12-14 15:23:28,020]  WARN {org.apache.shindig.gadgets.features.FeatureResourceLoader} -  The remote library from http://www.google.com/ig/lib/libga.js cannot be retrieved. 
+TID: [-1234] [] [2015-12-14 15:23:28,520]  INFO {org.apache.shindig.config.JsonContainerConfigLoader} -  Resources from containers/default/container.js are loading. 
+TID: [-1234] [] [2015-12-14 15:23:28,520]  INFO {org.apache.shindig.config.JsonContainerConfigLoader} -  Container configuration containers/default/container.js is being read. 
+TID: [-1234] [] [2015-12-14 15:23:28,703]  INFO {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger} -  Using random key for OAuth2 client-side state encryption 
+TID: [-1234] [] [2015-12-14 15:23:28,703]  INFO {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger} -  OAuth2CrypterProvider constructor 
+TID: [-1234] [] [2015-12-14 15:23:28,709]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule$OAuthCrypterProvider} -  Using random key for OAuth client-side state encryption 
+TID: [-1234] [] [2015-12-14 15:23:28,709]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule} -  A random key for OAuth client-side state encryption is being used. 
+TID: [-1234] [] [2015-12-14 15:23:28,710]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule} -  The OAuth signing key from res://wso2carbon.pem is loading. 
+TID: [-1234] [] [2015-12-14 15:23:28,794]  INFO {org.apache.shiro.realm.AuthorizingRealm} -  No cache or cacheManager properties have been set.  Authorization cache cannot be obtained. 
+TID: [-1234] [] [2015-12-14 15:23:28,794]  INFO {org.apache.shiro.config.IniSecurityManagerFactory} -  Realms have been explicitly set on the SecurityManager instance - auto-setting of realms will not occur. 
+TID: [-1234] [] [2015-12-14 15:23:28,800]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shindig].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/shindig.war] 
+TID: [-1234] [] [2015-12-14 15:23:29,331]  INFO {JAGGERY.js.serverUrl:js} -  WSO2 Log Analyzer Console URL : https://172.17.42.1:9443/loganalyzer 
+TID: [-1234] [] [2015-12-14 15:23:29,332]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/loganalyzer].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/jaggeryapps/loganalyzer] 
+TID: [-1234] [] [2015-12-14 15:23:29,356]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/portal].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/jaggeryapps/portal] 
+TID: [-1234] [] [2015-12-14 15:23:29,370]  INFO {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver} -  Thrift Server started at 0.0.0.0 
+TID: [-1234] [] [2015-12-14 15:23:29,379]  INFO {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver} -  Thrift SSL port : 7711 
+TID: [-1234] [] [2015-12-14 15:23:29,382]  INFO {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver} -  Thrift port : 7611 
+TID: [-1234] [] [2015-12-14 15:23:29,388]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read 
+TID: [-1234] [] [2015-12-14 15:23:29,408]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read 
+TID: [-1234] [] [2015-12-14 15:23:29,447]  INFO {org.wso2.carbon.ntask.core.service.impl.TaskServiceImpl} -  Task service starting in STANDALONE mode... 
+TID: [-1234] [] [2015-12-14 15:23:29,773]  INFO {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Analytics Indexing Mode: STANDALONE 
+TID: [-1234] [] [2015-12-14 15:23:29,781]  INFO {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Processing Analytics Indexing Shards {0=1, 1=1, 2=1, 3=1, 4=1, 5=1} 
+TID: [-1234] [] [2015-12-14 15:23:29,782]  INFO {org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl} -  Data purging is enabled in this node 
+TID: [-1234] [] [2015-12-14 15:23:29,807]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Loading Spark defaults from /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/conf/analytics/spark/spark-defaults.conf 
+TID: [-1234] [] [2015-12-14 15:23:30,057]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Starting SPARK in the LOCAL mode... 
+TID: [-1234] [] [2015-12-14 15:23:30,398]  WARN {org.apache.hadoop.util.NativeCodeLoader} -  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable 
+TID: [-1234] [] [2015-12-14 15:23:30,441]  WARN {org.apache.spark.util.Utils} -  Your hostname, anuruddha resolves to a loopback address: 127.0.0.1; using 10.100.5.106 instead (on interface wlan0) 
+TID: [-1234] [] [2015-12-14 15:23:30,441]  WARN {org.apache.spark.util.Utils} -  Set SPARK_LOCAL_IP if you need to bind to another address 
+TID: [-1] [] [2015-12-14 15:23:30,702]  INFO {Remoting} -  Starting remoting 
+TID: [-1] [] [2015-12-14 15:23:30,796]  INFO {Remoting} -  Remoting started; listening on addresses :[akka.tcp://sparkDriver@10.100.5.106:13000] 
+TID: [-1] [] [2015-12-14 15:23:31,338]  INFO {org.wso2.carbon.event.processor.manager.core.internal.CarbonEventManagementService} -  Starting polling event receivers 
+TID: [-1234] [] [2015-12-14 15:23:31,696]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Started Spark CLIENT in the LOCAL mode with the application name : CarbonAnalytics and UI port : 4040 
+TID: [-1234] [] [2015-12-14 15:23:31,733]  INFO {org.wso2.carbon.core.init.JMXServerManager} -  JMX Service URL  : service:jmx:rmi://localhost:11111/jndi/rmi://localhost:9999/jmxrmi 
+TID: [-1234] [] [2015-12-14 15:23:31,736]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deploying analytics event store: loganalyzer.xml 
+TID: [-1234] [] [2015-12-14 15:23:31,754]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  Server           :  WSO2 Log Analyzer-1.0.0 
+TID: [-1234] [] [2015-12-14 15:23:31,754]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  WSO2 Carbon started in 52 sec 
+TID: [-1234] [] [2015-12-14 15:23:31,764]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:loganalyzer:1.0.0 
+TID: [-1234] [] [2015-12-14 15:23:31,764]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deployed successfully analytics event store: loganalyzer.xml 
+TID: [-1234] [] [2015-12-14 15:23:31,917]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} -  Mgt Console URL  : https://172.17.42.1:9443/carbon/ 
+TID: [-1234] [] [2015-12-14 16:13:22,011]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown hook triggered.... 
+TID: [-1234] [] [2015-12-14 16:13:22,014]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Gracefully shutting down WSO2 Log Analyzer... 
+TID: [-1234] [] [2015-12-14 16:13:22,017]  INFO {org.wso2.carbon.core.ServerManagement} -  Starting to switch to maintenance mode... 
+TID: [-1234] [] [2015-12-14 16:13:22,021]  INFO {org.wso2.carbon.core.ServerManagement} -  Stopped all transport listeners 
+TID: [-1234] [] [2015-12-14 16:13:22,021]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for request service completion... 
+TID: [-1234] [] [2015-12-14 16:13:22,024]  INFO {org.wso2.carbon.core.ServerManagement} -  All requests have been served. 
+TID: [-1234] [] [2015-12-14 16:13:22,024]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for deployment completion... 
+TID: [-1234] [] [2015-12-14 16:13:22,058]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shindig] 
+TID: [-1234] [] [2015-12-14 16:13:22,060]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Closing Root WebApplicationContext: startup date [Mon Dec 14 15:22:52 IST 2015]; root of context hierarchy 
+TID: [-1234] [] [2015-12-14 16:13:22,061]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b1e037d: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,analyticsServices,analyticsBean,analyticsExceptionMapper,analyticsIndexExceptionMapper,analyticsTableNotFoundExceptionMapper,analyticsTimeoutExceptionMapper,jacksonJsonProvider,httpHeadersOutInterceptor]; root of factory hierarchy 
+TID: [-1234] [] [2015-12-14 16:13:22,073]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/analytics] 
+TID: [-1234] [] [2015-12-14 16:13:22,079]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputwebsocket] 
+TID: [-1234] [] [2015-12-14 16:13:22,080]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Closing Root WebApplicationContext: startup date [Mon Dec 14 15:22:53 IST 2015]; root of context hierarchy 
+TID: [-1234] [] [2015-12-14 16:13:22,082]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7adca6c8: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer#0,org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer#0,services,basicAuthenticationFilter,sessionAuthenticationFilter]; root of factory hierarchy 
+TID: [-1234] [] [2015-12-14 16:13:22,088]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/api] 
+TID: [-1234] [] [2015-12-14 16:13:22,095]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputui] 
+TID: [-1234] [] [2015-12-14 16:13:22,101]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/inputwebsocket] 
+TID: [-1234] [] [2015-12-14 16:13:22,105]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/loganalyzer] 
+TID: [-1234] [] [2015-12-14 16:13:22,109]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/portal] 
+TID: [-1234] [] [2015-12-14 16:13:22,110]  INFO {org.wso2.carbon.core.ServerManagement} -  All deployment tasks have been completed. 
+TID: [-1234] [] [2015-12-14 16:13:22,110]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for server task completion... 
+TID: [-1234] [] [2015-12-14 16:13:22,114]  INFO {org.wso2.carbon.core.ServerManagement} -  All server tasks have been completed. 
+TID: [-1234] [] [2015-12-14 16:13:22,114]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down WSO2 Log Analyzer... 
+TID: [-1234] [] [2015-12-14 16:13:22,114]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down OSGi framework... 
+TID: [-1234] [] [2015-12-14 16:13:22,130]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiverServiceComponent} -  Binary Data Receiver server shutting down... 
+TID: [-1234] [] [2015-12-14 16:13:22,130]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver} -  Stopping Binary Server.. 
+TID: [-1234] [] [2015-12-14 16:13:22,130]  INFO {org.wso2.carbon.databridge.receiver.thrift.internal.ThriftDataReceiverDS} -  Thrift server shutting down... 
+TID: [-1234] [] [2015-12-14 16:13:22,181]  INFO {org.wso2.carbon.event.processor.core.internal.CarbonEventProcessorService} -  Successfully shutdown ExecutionPlans 
+TID: [-1234] [] [2015-12-14 16:13:22,184]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Stopping CarbonServerManager... 
+TID: [-1234] [] [2015-12-14 16:13:24,469]  INFO {org.wso2.carbon.tomcat.ext.internal.CarbonTomcatServiceComponent} -  Stopping the carbon web-app registered under : / 
+TID: [-1234] [] [2015-12-14 16:13:24,480]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Stopped JMX reporter for Metrics 
+TID: [-1234] [] [2015-12-14 16:13:24,480]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Stopped JDBC reporter for Metrics 
+TID: [-1234] [] [2015-12-14 16:13:26,255]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown complete 
+TID: [-1234] [] [2015-12-14 16:13:26,255]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Halting JVM 
+TID: [-1] [] [2015-12-14 16:13:32,067]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1621705647/ 
+TID: [-1] [] [2015-12-14 16:13:32,063]  WARN {org.apache.axiom.util.stax.dialect.StAXDialectDetector} -  Unable to determine dialect of the StAX implementation at bundleresource://14.fwk1621705647/ 
+TID: [-1234] [] [2015-12-14 16:13:32,263]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Starting WSO2 Carbon... 
+TID: [-1234] [] [2015-12-14 16:13:32,264]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Operating System : Linux 3.13.0-66-generic, amd64 
+TID: [-1234] [] [2015-12-14 16:13:32,264]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Home        : /usr/lib/jvm/jdk1.7.0_65/jre 
+TID: [-1234] [] [2015-12-14 16:13:32,264]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Version     : 1.7.0_65 
+TID: [-1234] [] [2015-12-14 16:13:32,264]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java VM          : Java HotSpot(TM) 64-Bit Server VM 24.65-b04,Oracle Corporation 
+TID: [-1234] [] [2015-12-14 16:13:32,264]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Carbon Home      : /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT 
+TID: [-1234] [] [2015-12-14 16:13:32,264]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  Java Temp Dir    : /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/tmp 
+TID: [-1234] [] [2015-12-14 16:13:32,264]  INFO {org.wso2.carbon.core.internal.CarbonCoreActivator} -  User             : anuruddha, en-US, Asia/Colombo 
+TID: [-1234] [] [2015-12-14 16:13:32,331]  WARN {org.wso2.carbon.core.bootup.validator.util.ValidationResultPrinter} -  Carbon is configured to use the default keystore (wso2carbon.jks). To maximize security when deploying to a production environment, configure a new keystore with a unique password in the production server profile. 
+TID: [-1] [] [2015-12-14 16:13:32,490]  INFO {org.wso2.carbon.event.output.adapter.kafka.internal.ds.KafkaEventAdapterServiceDS} -  Successfully deployed the Kafka output event adaptor service 
+TID: [-1234] [] [2015-12-14 16:13:33,631]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver} -  Started Binary SSL Transport on port : 9711 
+TID: [-1234] [] [2015-12-14 16:13:33,632]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver} -  Started Binary TCP Transport on port : 9611 
+TID: [-1234] [] [2015-12-14 16:13:33,636]  INFO {org.wso2.carbon.databridge.core.internal.DataBridgeDS} -  Successfully deployed Agent Server  
+TID: [-1234] [] [2015-12-14 16:13:33,720]  INFO {org.wso2.carbon.registry.core.jdbc.EmbeddedRegistryService} -  Configured Registry in 34ms 
+TID: [-1234] [] [2015-12-14 16:13:33,780]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Registry Mode    : READ-WRITE 
+TID: [-1234] [] [2015-12-14 16:13:34,569]  INFO {org.wso2.carbon.metrics.impl.MetricServiceImpl} -  Creating JDBC reporter for Metrics with source 'anuruddha', data source 'jdbc/WSO2MetricsDB' and 60 seconds polling period 
+TID: [-1234] [] [2015-12-14 16:13:34,569]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JMX reporter for Metrics 
+TID: [-1234] [] [2015-12-14 16:13:34,573]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Started JDBC reporter for Metrics 
+TID: [-1234] [] [2015-12-14 16:13:35,793]  INFO {org.wso2.carbon.registry.indexing.solr.SolrClient} -  Default Embedded Solr Server Initialized 
+TID: [-1234] [] [2015-12-14 16:13:35,926]  INFO {org.wso2.carbon.user.core.internal.UserStoreMgtDSComponent} -  Carbon UserStoreMgtDSComponent activated successfully. 
+TID: [-1] [] [2015-12-14 16:13:40,334]  INFO {org.apache.catalina.startup.TaglibUriRule} -  TLD skipped. URI: http://tiles.apache.org/tags-tiles is already defined 
+TID: [-1234] [] [2015-12-14 16:13:40,866]  INFO {org.apache.axis2.deployment.ClusterBuilder} -  Clustering has been disabled 
+TID: [-1234] [] [2015-12-14 16:13:40,980]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. 
+TID: [-1234] [] [2015-12-14 16:13:40,981]  INFO {org.wso2.carbon.identity.user.store.configuration.deployer.UserStoreConfigurationDeployer} -  User Store Configuration Deployer initiated. 
+TID: [-1234] [] [2015-12-14 16:13:41,028]  INFO {org.apache.axis2.deployment.ModuleDeployer} -  Deploying module: addressing-1.6.1-wso2v15 - file:/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/client/modules/addressing-1.6.1-wso2v15.mar 
+TID: [-1234] [] [2015-12-14 16:13:41,620]  WARN {org.apache.axis2.description.java2wsdl.DefaultSchemaGenerator} -  We don't support method overloading. Ignoring [validateAudienceRestriction] 
+TID: [-1234] [] [2015-12-14 16:13:41,853]  INFO {org.apache.axis2.deployment.DeploymentEngine} -  Deploying Web service: org.wso2.carbon.tryit-4.4.8 -  
+TID: [-1234] [] [2015-12-14 16:13:42,061]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Repository       : /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/ 
+TID: [-1] [] [2015-12-14 16:13:42,063]  INFO {org.wso2.carbon.event.input.adapter.kafka.internal.ds.KafkaEventAdapterServiceHolder} -  Kafka input event adaptor waiting for dependent configurations to load 
+TID: [-1234] [] [2015-12-14 16:13:42,088]  INFO {org.wso2.carbon.core.multitenancy.eager.TenantLoadingConfig} -  Using tenant lazy loading policy... 
+TID: [-1234] [] [2015-12-14 16:13:42,096]  INFO {org.wso2.carbon.core.internal.permission.update.PermissionUpdater} -  Permission cache updated for tenant -1234 
+TID: [-1234] [] [2015-12-14 16:13:42,205]  INFO {org.wso2.carbon.core.transports.http.HttpsTransportListener} -  HTTPS port       : 9443 
+TID: [-1234] [] [2015-12-14 16:13:42,205]  INFO {org.wso2.carbon.core.transports.http.HttpTransportListener} -  HTTP port        : 9763 
+TID: [-1234] [] [2015-12-14 16:13:42,238]  INFO {org.wso2.carbon.event.stream.core.EventStreamDeployer} -  Stream definition is deployed successfully  : loganalyzer:1.0.0 
+TID: [-1234] [] [2015-12-14 16:13:43,326]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Mon Dec 14 16:13:43 IST 2015]; root of context hierarchy 
+TID: [-1234] [] [2015-12-14 16:13:43,357]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] 
+TID: [-1234] [] [2015-12-14 16:13:43,411]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from URL [jndi:/localhost/analytics/WEB-INF/cxf-servlet.xml] 
+TID: [-1234] [] [2015-12-14 16:13:43,485]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2db0204c: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,analyticsServices,analyticsBean,analyticsExceptionMapper,analyticsIndexExceptionMapper,analyticsTableNotFoundExceptionMapper,analyticsTimeoutExceptionMapper,jacksonJsonProvider,httpHeadersOutInterceptor]; root of factory hierarchy 
+TID: [-1234] [] [2015-12-14 16:13:43,749]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / 
+TID: [-1234] [] [2015-12-14 16:13:43,806]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/analytics].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/analytics.war] 
+TID: [-1234] [] [2015-12-14 16:13:44,186]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization started 
+TID: [-1234] [] [2015-12-14 16:13:44,201]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Refreshing Root WebApplicationContext: startup date [Mon Dec 14 16:13:44 IST 2015]; root of context hierarchy 
+TID: [-1234] [] [2015-12-14 16:13:44,227]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from ServletContext resource [/WEB-INF/beans.xml] 
+TID: [-1234] [] [2015-12-14 16:13:44,254]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf.xml] 
+TID: [-1234] [] [2015-12-14 16:13:44,269]  INFO {org.springframework.beans.factory.xml.XmlBeanDefinitionReader} -  Loading XML bean definitions from class path resource [META-INF/cxf/cxf-servlet.xml] 
+TID: [-1234] [] [2015-12-14 16:13:44,402]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6090ac27: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer#0,org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer#0,services,basicAuthenticationFilter,sessionAuthenticationFilter]; root of factory hierarchy 
+TID: [-1234] [] [2015-12-14 16:13:44,570]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / 
+TID: [-1234] [] [2015-12-14 16:13:44,600]  INFO {org.springframework.web.context.ContextLoader} -  Root WebApplicationContext: initialization completed in 414 ms 
+TID: [-1234] [] [2015-12-14 16:13:44,604]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/api].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/api.war] 
+TID: [-1234] [] [2015-12-14 16:13:44,644]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/inputwebsocket].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/inputwebsocket.war] 
+TID: [-1234] [] [2015-12-14 16:13:45,011]  INFO {org.apache.cxf.endpoint.ServerImpl} -  Setting the server's publish address to be / 
+TID: [-1234] [] [2015-12-14 16:13:45,046]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputui].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/outputui.war] 
+TID: [-1234] [] [2015-12-14 16:13:45,068]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputwebsocket].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/outputwebsocket.war] 
+TID: [-1234] [] [2015-12-14 16:13:46,524]  INFO {net.sf.ehcache.pool.sizeof.filter.AnnotationSizeOfFilter} -  Using regular expression provided through VM argument net.sf.ehcache.pool.sizeof.ignore.pattern for IgnoreSizeOf annotation : ^.*cache\..*IgnoreSizeOf$ 
+TID: [-1234] [] [2015-12-14 16:13:46,526]  INFO {net.sf.ehcache.pool.impl.DefaultSizeOfEngine} -  Using user supplied filter @ jar:file:/media/anuruddha/enterprise/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/shindig/WEB-INF/lib/shindig-common-2.5.2.jar!/org/apache/shindig/common/cache/ehcache/SizeOfFilter.txt 
+TID: [-1234] [] [2015-12-14 16:13:46,533]  INFO {net.sf.ehcache.pool.sizeof.JvmInformation} -  Detected JVM data model settings of: 64-Bit HotSpot JVM with Compressed OOPs 
+TID: [-1234] [] [2015-12-14 16:13:46,755]  INFO {net.sf.ehcache.pool.sizeof.AgentLoader} -  Extracted agent jar to temporary file /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/tmp/ehcache-sizeof-agent6458365018641021204.jar 
+TID: [-1234] [] [2015-12-14 16:13:46,755]  INFO {net.sf.ehcache.pool.sizeof.AgentLoader} -  Trying to load agent @ /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/tmp/ehcache-sizeof-agent6458365018641021204.jar 
+TID: [-1234] [] [2015-12-14 16:13:46,758]  INFO {net.sf.ehcache.pool.impl.DefaultSizeOfEngine} -  using Agent sizeof engine 
+TID: [-1234] [] [2015-12-14 16:13:46,809]  INFO {net.sf.ehcache.pool.impl.DefaultSizeOfEngine} -  using Agent sizeof engine 
+TID: [-1234] [] [2015-12-14 16:13:46,828]  INFO {org.apache.shindig.gadgets.features.FeatureRegistry} -  Resources from res:features/features.txt are loading. 
+TID: [-1234] [] [2015-12-14 16:13:46,834]  INFO {org.apache.shindig.common.xml.XmlUtil} -  The XML processor being used does not support secure parsing. 
+TID: [-1234] [] [2015-12-14 16:13:46,834]  INFO {org.apache.shindig.common.xml.XmlUtil} -  Document builders are being reused. 
+TID: [-1234] [] [2015-12-14 16:13:47,044]  INFO {org.apache.shindig.gadgets.features.FeatureRegistry} -  Resources from res:features-extras/features.txt are loading. 
+TID: [-1234] [] [2015-12-14 16:13:47,749]  INFO {org.apache.shindig.config.JsonContainerConfigLoader} -  Resources from containers/default/container.js are loading. 
+TID: [-1234] [] [2015-12-14 16:13:47,749]  INFO {org.apache.shindig.config.JsonContainerConfigLoader} -  Container configuration containers/default/container.js is being read. 
+TID: [-1234] [] [2015-12-14 16:13:47,918]  INFO {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger} -  Using random key for OAuth2 client-side state encryption 
+TID: [-1234] [] [2015-12-14 16:13:47,918]  INFO {org.apache.shindig.gadgets.oauth2.logger.FilteredLogger} -  OAuth2CrypterProvider constructor 
+TID: [-1234] [] [2015-12-14 16:13:47,923]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule} -  The OAuth signing key from res://wso2carbon.pem is loading. 
+TID: [-1234] [] [2015-12-14 16:13:47,924]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule$OAuthCrypterProvider} -  Using random key for OAuth client-side state encryption 
+TID: [-1234] [] [2015-12-14 16:13:47,924]  INFO {org.apache.shindig.gadgets.oauth.OAuthModule} -  A random key for OAuth client-side state encryption is being used. 
+TID: [-1234] [] [2015-12-14 16:13:48,004]  INFO {org.apache.shiro.realm.AuthorizingRealm} -  No cache or cacheManager properties have been set.  Authorization cache cannot be obtained. 
+TID: [-1234] [] [2015-12-14 16:13:48,004]  INFO {org.apache.shiro.config.IniSecurityManagerFactory} -  Realms have been explicitly set on the SecurityManager instance - auto-setting of realms will not occur. 
+TID: [-1234] [] [2015-12-14 16:13:48,008]  INFO {org.wso2.carbon.webapp.mgt.TomcatGenericWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shindig].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/webapps/shindig.war] 
+TID: [-1234] [] [2015-12-14 16:13:48,525]  INFO {JAGGERY.js.serverUrl:js} -  WSO2 Log Analyzer Console URL : https://172.17.42.1:9443/loganalyzer 
+TID: [-1234] [] [2015-12-14 16:13:48,526]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/loganalyzer].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/jaggeryapps/loganalyzer] 
+TID: [-1234] [] [2015-12-14 16:13:48,550]  INFO {org.jaggeryjs.jaggery.app.mgt.TomcatJaggeryWebappsDeployer} -  Deployed webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/portal].File[/home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/deployment/server/jaggeryapps/portal] 
+TID: [-1234] [] [2015-12-14 16:13:48,566]  INFO {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver} -  Thrift Server started at 0.0.0.0 
+TID: [-1234] [] [2015-12-14 16:13:48,576]  INFO {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver} -  Thrift SSL port : 7711 
+TID: [-1234] [] [2015-12-14 16:13:48,579]  INFO {org.wso2.carbon.databridge.receiver.thrift.ThriftDataReceiver} -  Thrift port : 7611 
+TID: [-1234] [] [2015-12-14 16:13:48,586]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read 
+TID: [-1234] [] [2015-12-14 16:13:48,605]  INFO {org.apache.tomcat.util.net.NioSelectorPool} -  Using a shared selector for servlet write/read 
+TID: [-1234] [] [2015-12-14 16:13:48,647]  INFO {org.wso2.carbon.ntask.core.service.impl.TaskServiceImpl} -  Task service starting in STANDALONE mode... 
+TID: [-1234] [] [2015-12-14 16:13:48,952]  INFO {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Analytics Indexing Mode: STANDALONE 
+TID: [-1234] [] [2015-12-14 16:13:48,954]  INFO {org.wso2.carbon.analytics.dataservice.core.indexing.AnalyticsDataIndexer} -  Processing Analytics Indexing Shards {0=1, 1=1, 2=1, 3=1, 4=1, 5=1} 
+TID: [-1234] [] [2015-12-14 16:13:48,954]  INFO {org.wso2.carbon.analytics.dataservice.core.AnalyticsDataServiceImpl} -  Data purging is enabled in this node 
+TID: [-1234] [] [2015-12-14 16:13:48,987]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Loading Spark defaults from /home/anuruddha/wso2/das/las/wso2la-1.0.0-SNAPSHOT/repository/conf/analytics/spark/spark-defaults.conf 
+TID: [-1234] [] [2015-12-14 16:13:49,258]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Starting SPARK in the LOCAL mode... 
+TID: [-1234] [] [2015-12-14 16:13:49,496]  WARN {org.apache.hadoop.util.NativeCodeLoader} -  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable 
+TID: [-1234] [] [2015-12-14 16:13:49,547]  WARN {org.apache.spark.util.Utils} -  Your hostname, anuruddha resolves to a loopback address: 127.0.0.1; using 10.100.5.106 instead (on interface wlan0) 
+TID: [-1234] [] [2015-12-14 16:13:49,547]  WARN {org.apache.spark.util.Utils} -  Set SPARK_LOCAL_IP if you need to bind to another address 
+TID: [-1] [] [2015-12-14 16:13:49,852]  INFO {Remoting} -  Starting remoting 
+TID: [-1] [] [2015-12-14 16:13:49,951]  INFO {Remoting} -  Remoting started; listening on addresses :[akka.tcp://sparkDriver@10.100.5.106:13000] 
+TID: [-1234] [] [2015-12-14 16:13:50,821]  INFO {org.wso2.carbon.analytics.spark.core.internal.SparkAnalyticsExecutor} -  Started Spark CLIENT in the LOCAL mode with the application name : CarbonAnalytics and UI port : 4040 
+TID: [-1234] [] [2015-12-14 16:13:50,858]  INFO {org.wso2.carbon.core.init.JMXServerManager} -  JMX Service URL  : service:jmx:rmi://localhost:11111/jndi/rmi://localhost:9999/jmxrmi 
+TID: [-1234] [] [2015-12-14 16:13:50,861]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deploying analytics event store: loganalyzer.xml 
+TID: [-1234] [] [2015-12-14 16:13:50,884]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  Server           :  WSO2 Log Analyzer-1.0.0 
+TID: [-1234] [] [2015-12-14 16:13:50,885]  INFO {org.wso2.carbon.core.internal.StartupFinalizerServiceComponent} -  WSO2 Carbon started in 21 sec 
+TID: [-1234] [] [2015-12-14 16:13:50,890]  INFO {org.wso2.carbon.event.stream.core.internal.EventJunction} -  WSO2EventConsumer added to the junction. Stream:loganalyzer:1.0.0 
+TID: [-1234] [] [2015-12-14 16:13:50,891]  INFO {org.wso2.carbon.analytics.eventsink.AnalyticsEventStoreDeployer} -  Deployed successfully analytics event store: loganalyzer.xml 
+TID: [-1234] [] [2015-12-14 16:13:51,070]  INFO {org.wso2.carbon.ui.internal.CarbonUIServiceComponent} -  Mgt Console URL  : https://172.17.42.1:9443/carbon/ 
+TID: [-1234] [] [2015-12-14 16:14:17,061]  WARN {org.apache.cxf.jaxrs.impl.WebApplicationExceptionMapper} -  WebApplicationException has been caught : Unexpected character (''' (code 39)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')_ at [Source: org.apache.cxf.transport.http.AbstractHTTPDestination$1@514d41b8; line: 4, column: 11] (Sanitized) 
+TID: [-1] [] [2015-12-14 16:14:22,064]  INFO {org.wso2.carbon.event.processor.manager.core.internal.CarbonEventManagementService} -  Starting polling event receivers 
+TID: [-1234] [] [2015-12-14 16:14:33,432] ERROR {org.apache.catalina.core.StandardWrapperValve} -  Servlet.service() for servlet [LASRestApi] in context with path [/api] threw exception 
+java.lang.IllegalArgumentException: Illegal character in path at index 40: http://172.17.42.1:9763/api/logs/stream/[edrt]/metadata
+	at java.net.URI.create(URI.java:859)
+	at org.apache.cxf.transport.servlet.BaseUrlHelper.getBaseURL(BaseUrlHelper.java:49)
+	at org.apache.cxf.transport.servlet.ServletController.getBaseURL(ServletController.java:73)
+	at org.apache.cxf.transport.servlet.ServletController.updateDestination(ServletController.java:82)
+	at org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:153)
+	at org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:126)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:185)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.doGet(AbstractHTTPServlet.java:113)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:620)
+	at org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:504)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.continueInvocation(CompositeValve.java:99)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonTomcatValve$1.invoke(CarbonTomcatValve.java:47)
+	at org.wso2.carbon.webapp.mgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:57)
+	at org.wso2.carbon.event.receiver.core.internal.tenantmgt.TenantLazyLoaderValve.invoke(TenantLazyLoaderValve.java:48)
+	at org.wso2.carbon.tomcat.ext.valves.TomcatValveContainer.invokeValves(TomcatValveContainer.java:47)
+	at org.wso2.carbon.tomcat.ext.valves.CompositeValve.invoke(CompositeValve.java:62)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonStuckThreadDetectionValve.invoke(CarbonStuckThreadDetectionValve.java:159)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.wso2.carbon.tomcat.ext.valves.CarbonContextCreatorValve.invoke(CarbonContextCreatorValve.java:57)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:421)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1074)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:611)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1698)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.URISyntaxException: Illegal character in path at index 40: http://172.17.42.1:9763/api/logs/stream/[edrt]/metadata
+	at java.net.URI$Parser.fail(URI.java:2829)
+	at java.net.URI$Parser.checkChars(URI.java:3002)
+	at java.net.URI$Parser.parseHierarchical(URI.java:3086)
+	at java.net.URI$Parser.parse(URI.java:3034)
+	at java.net.URI.<init>(URI.java:595)
+	at java.net.URI.create(URI.java:857)
+	... 38 more
+TID: [-1234] [] [2015-12-14 16:15:51,975]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown hook triggered.... 
+TID: [-1234] [] [2015-12-14 16:15:51,979]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Gracefully shutting down WSO2 Log Analyzer... 
+TID: [-1234] [] [2015-12-14 16:15:51,985]  INFO {org.wso2.carbon.core.ServerManagement} -  Starting to switch to maintenance mode... 
+TID: [-1234] [] [2015-12-14 16:15:51,986]  INFO {org.wso2.carbon.core.ServerManagement} -  Stopped all transport listeners 
+TID: [-1234] [] [2015-12-14 16:15:51,986]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for request service completion... 
+TID: [-1234] [] [2015-12-14 16:15:51,990]  INFO {org.wso2.carbon.core.ServerManagement} -  All requests have been served. 
+TID: [-1234] [] [2015-12-14 16:15:51,990]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for deployment completion... 
+TID: [-1234] [] [2015-12-14 16:15:52,017]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shindig] 
+TID: [-1234] [] [2015-12-14 16:15:52,019]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Closing Root WebApplicationContext: startup date [Mon Dec 14 16:13:43 IST 2015]; root of context hierarchy 
+TID: [-1234] [] [2015-12-14 16:15:52,021]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2db0204c: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,analyticsServices,analyticsBean,analyticsExceptionMapper,analyticsIndexExceptionMapper,analyticsTableNotFoundExceptionMapper,analyticsTimeoutExceptionMapper,jacksonJsonProvider,httpHeadersOutInterceptor]; root of factory hierarchy 
+TID: [-1234] [] [2015-12-14 16:15:52,036]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/analytics] 
+TID: [-1234] [] [2015-12-14 16:15:52,043]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputwebsocket] 
+TID: [-1234] [] [2015-12-14 16:15:52,044]  INFO {org.springframework.web.context.support.XmlWebApplicationContext} -  Closing Root WebApplicationContext: startup date [Mon Dec 14 16:13:44 IST 2015]; root of context hierarchy 
+TID: [-1234] [] [2015-12-14 16:15:52,048]  INFO {org.springframework.beans.factory.support.DefaultListableBeanFactory} -  Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6090ac27: defining beans [cxf,org.apache.cxf.bus.spring.BusWiringBeanFactoryPostProcessor,org.apache.cxf.bus.spring.Jsr250BeanPostProcessor,org.apache.cxf.bus.spring.BusExtensionPostProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer#0,org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer#0,services,basicAuthenticationFilter,sessionAuthenticationFilter]; root of factory hierarchy 
+TID: [-1234] [] [2015-12-14 16:15:52,059]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/api] 
+TID: [-1234] [] [2015-12-14 16:15:52,066]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/outputui] 
+TID: [-1234] [] [2015-12-14 16:15:52,071]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/inputwebsocket] 
+TID: [-1234] [] [2015-12-14 16:15:52,075]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/loganalyzer] 
+TID: [-1234] [] [2015-12-14 16:15:52,079]  INFO {org.wso2.carbon.webapp.mgt.WebApplication} -  Unloaded webapp: StandardEngine[Catalina].StandardHost[localhost].StandardContext[/portal] 
+TID: [-1234] [] [2015-12-14 16:15:52,080]  INFO {org.wso2.carbon.core.ServerManagement} -  All deployment tasks have been completed. 
+TID: [-1234] [] [2015-12-14 16:15:52,080]  INFO {org.wso2.carbon.core.ServerManagement} -  Waiting for server task completion... 
+TID: [-1234] [] [2015-12-14 16:15:52,087]  INFO {org.wso2.carbon.registry.core.internal.RegistryCoreServiceComponent} -  Writing logs  
+TID: [-1234] [] [2015-12-14 16:15:52,087]  INFO {org.wso2.carbon.core.ServerManagement} -  All server tasks have been completed. 
+TID: [-1234] [] [2015-12-14 16:15:52,088]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down WSO2 Log Analyzer... 
+TID: [-1234] [] [2015-12-14 16:15:52,088]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutting down OSGi framework... 
+TID: [-1234] [] [2015-12-14 16:15:52,105]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiverServiceComponent} -  Binary Data Receiver server shutting down... 
+TID: [-1234] [] [2015-12-14 16:15:52,105]  INFO {org.wso2.carbon.databridge.receiver.binary.internal.BinaryDataReceiver} -  Stopping Binary Server.. 
+TID: [-1234] [] [2015-12-14 16:15:52,105]  INFO {org.wso2.carbon.databridge.receiver.thrift.internal.ThriftDataReceiverDS} -  Thrift server shutting down... 
+TID: [-1234] [] [2015-12-14 16:15:52,150]  INFO {org.wso2.carbon.event.processor.core.internal.CarbonEventProcessorService} -  Successfully shutdown ExecutionPlans 
+TID: [-1234] [] [2015-12-14 16:15:52,154]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Stopping CarbonServerManager... 
+TID: [-1234] [] [2015-12-14 16:15:54,430]  INFO {org.wso2.carbon.tomcat.ext.internal.CarbonTomcatServiceComponent} -  Stopping the carbon web-app registered under : / 
+TID: [-1234] [] [2015-12-14 16:15:54,440]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Stopped JMX reporter for Metrics 
+TID: [-1234] [] [2015-12-14 16:15:54,441]  INFO {org.wso2.carbon.metrics.impl.reporter.AbstractReporter} -  Stopped JDBC reporter for Metrics 
+TID: [-1234] [] [2015-12-14 16:15:55,957]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Shutdown complete 
+TID: [-1234] [] [2015-12-14 16:15:55,957]  INFO {org.wso2.carbon.core.init.CarbonServerManager} -  Halting JVM 
